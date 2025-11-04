@@ -55,4 +55,110 @@
             <p>Choose your package type and enter the amount below</p>
             
             <!-- Amount Input Form -->
-            <div class="amount-input-section
+            <div class="amount-input-section">
+                <label for="payment-amount">Payment Amount (USD):</label>
+                <div class="input-wrapper">
+                    <span class="currency-symbol">$</span>
+                    <input 
+                        type="number" 
+                        id="payment-amount" 
+                        name="payment-amount" 
+                        min="1" 
+                        step="0.01" 
+                        placeholder="Enter amount (e.g., 999.00)"
+                        required>
+                </div>
+                <p class="input-note">Minimum amount: $1.00</p>
+            </div>
+
+            <!-- Number of Travelers (Optional) -->
+            <div class="travelers-input-section">
+                <label for="num-travelers">Number of Travelers:</label>
+                <input 
+                    type="number" 
+                    id="num-travelers" 
+                    name="num-travelers" 
+                    min="1" 
+                    max="10" 
+                    value="1"
+                    placeholder="1">
+                <p class="input-note">Adjust the amount above based on total travelers</p>
+            </div>
+
+            <!-- Customer Name (Optional) -->
+            <div class="customer-info-section">
+                <label for="customer-name">Your Name (Optional):</label>
+                <input 
+                    type="text" 
+                    id="customer-name" 
+                    name="customer-name" 
+                    placeholder="Enter your full name">
+            </div>
+
+            <!-- Customer Email (Optional) -->
+            <div class="customer-info-section">
+                <label for="customer-email">Email Address (Optional):</label>
+                <input 
+                    type="email" 
+                    id="customer-email" 
+                    name="customer-email" 
+                    placeholder="your.email@example.com">
+            </div>
+
+            <p class="payment-instruction">Click the PayPal button below to proceed with secure payment</p>
+            
+            <!-- PayPal Button Container -->
+            <div id="paypal-button-container"></div>
+            
+            <p id="error-message" class="error-message"></p>
+            
+            <div class="security-badges">
+                <p>🔒 Secure Payment Powered by PayPal</p>
+                <p class="small-text">Your payment information is protected with industry-leading security</p>
+            </div>
+        </section>
+
+        <section class="itinerary">
+            <h2>Day-by-Day Itinerary</h2>
+            <div class="day">
+                <h3>Day 1: Arrival & Marina Cruise</h3>
+                <p>Airport pickup, hotel check-in, evening Marina Dhow Cruise with dinner</p>
+            </div>
+            <div class="day">
+                <h3>Day 2: City Tour & Burj Khalifa</h3>
+                <p>Dubai Museum, Gold Souk, Burj Khalifa 124th floor, Dubai Mall visit</p>
+            </div>
+            <div class="day">
+                <h3>Day 3: Desert Safari Adventure</h3>
+                <p>Dune bashing, camel riding, BBQ dinner, traditional shows</p>
+            </div>
+            <div class="day">
+                <h3>Day 4: Shopping & Leisure</h3>
+                <p>Mall of Emirates, ski Dubai option, free time for exploration</p>
+            </div>
+            <div class="day">
+                <h3>Day 5: Departure</h3>
+                <p>Hotel checkout, airport transfer</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <h2>Need Help?</h2>
+            <p>Contact Sanya Travel UAE for any questions about your booking</p>
+            <p>📧 Email: info@sanyatraveluae.com</p>
+            <p>📱 WhatsApp: Available upon request</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sanya Travel UAE. All rights reserved.</p>
+            <p class="small-text">Licensed Travel Agency - Dubai, UAE</p>
+        </div>
+    </footer>
+
+    <!-- PayPal SDK - LIVE MODE -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AaBu62cP_vZ8MDVq1M7xp3qGrnApXjbonzARyGja38Peq6VMY-27WbyoORgufiWxqZjyiTTascicxL-K&currency=USD"></script>
+    <script src="payment.js"></script>
+</body>
+</html>
