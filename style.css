@@ -150,3 +150,127 @@ footer {
         height: 250px;
     }
 }
+/* ... Keep all previous CSS ... */
+
+/* Amount Input Section Styles */
+.amount-input-section,
+.travelers-input-section,
+.customer-info-section {
+    margin: 1.5rem auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.amount-input-section label,
+.travelers-input-section label,
+.customer-info-section label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 15px;
+    font-size: 1.5rem;
+    color: #667eea;
+    font-weight: bold;
+}
+
+#payment-amount {
+    width: 100%;
+    padding: 1rem 1rem 1rem 40px;
+    font-size: 1.3rem;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#payment-amount:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+#num-travelers,
+#customer-name {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#num-travelers:focus,
+#customer-name:focus {
+    border-color: #667eea;
+}
+
+.input-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.payment-instruction {
+    margin: 2rem 0 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: none;
+}
+
+.price-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.package-option {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #667eea;
+    text-align: center;
+}
+
+.package-option h3 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.package-option p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .price-options {
+        grid-template-columns: 1fr;
+    }
+    
+    #payment-amount {
+        font-size: 1.1rem;
+        padding: 0.8rem 0.8rem 0.8rem 35px;
+    }
+}
